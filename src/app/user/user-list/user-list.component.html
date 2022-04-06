@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div>
+    <span id="pageTitle">User List</span>
+    <a routerLink="/user/create">New</a> | 
+    <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+</div>
+<table class="table table-s">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Reviewer</th>
+            <th>Admin</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.firstname}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.isReview}}</td>
+            <td>{{u.isAdmin}}</td>
+            <td>
+                <a routerLink="/user/detail/{{ u.id }}">Detail</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+       
