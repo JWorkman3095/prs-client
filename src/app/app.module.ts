@@ -15,6 +15,11 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserSearchPipe } from './user/user-search.pipe';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorSearchPipe } from './vendor/vendor-search.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     UserCreateComponent,
     UserEditComponent,
     UserSearchPipe,
-    UserLoginComponent
+    UserLoginComponent,
+    VendorListComponent,
+    VendorEditComponent,
+    VendorDetailComponent,
+    VendorCreateComponent,
+    VendorSearchPipe
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,
