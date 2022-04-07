@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <div>
-    <span id="pageTitle">User List</span>
-    <a routerLink="/user/create">New</a> | 
+    <span id="pageTitle">User List </span>
+    <a routerLink="/user/create">  New</a> | 
     <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 </div>
 <table class="table table-s">
@@ -21,13 +21,14 @@
         <tr *ngFor="let u of users">
             <td>{{u.id}}</td>
             <td>{{u.username}}</td>
-            <td>{{u.firstname}}</td>
+            <td>{{u.firstname + " " + u.lastname}}</td>
             <td>{{u.email}}</td>
             <td>{{u.phone}}</td>
             <td>{{u.isReview}}</td>
             <td>{{u.isAdmin}}</td>
             <td>
                 <a routerLink="/user/detail/{{ u.id }}">Detail</a>
+                
             </td>
         </tr>
     </tbody>

@@ -1,1 +1,36 @@
-<p>user-create works!</p>
+<app-menu></app-menu>
+<span id="pageTitle">Create new User</span>
+<hr>
+<table *ngIf="user" class="table table-sm">
+    <tr>
+        <th>Id</th><td><input [(ngModel)]="user.id" type="number" disabled></td>
+    </tr>
+    <tr>
+        <th>Username</th><td><input [(ngModel)]="user.username" type="text"></td>
+    </tr>
+    <tr>
+        <th>Password</th><td><input [(ngModel)]="user.password" type="text"></td>
+    </tr>
+    <tr>
+        <th>Firstname</th><td><input [(ngModel)]="user.firstname" type="text"></td>
+    </tr>
+    <tr>
+        <th>Lastname</th><td><input [(ngModel)]="user.lastname" type="text"></td>
+    </tr>
+    <tr>
+        <th>Phone Number</th><td><input [(ngModel)]="user.phone" type="text"></td>
+    </tr>
+    <tr>
+        <th>Email</th><td><input [(ngModel)]="user.email" type="text"></td>
+    </tr>
+    <tr>
+        <th>Reviewer?</th><td><input [(ngModel)]="user.isReview" type="checkbox"></td>
+    </tr>
+    <tr>
+        <th>Admin?</th><td><input [(ngModel)]="user.isAdmin" type="checkbox"></td>
+    </tr>
+</table>
+<div>
+    <button (click)="save()" class="btn btn-primary">Create</button>
+    | <a class="btn btn-secondary" routerLink="/user/list">Back</a>
+</div>

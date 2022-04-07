@@ -13,6 +13,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserSearchPipe } from './user/user-search.pipe';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     UserListComponent,
     UserDetailComponent,
     UserCreateComponent,
-    UserEditComponent
+    UserEditComponent,
+    UserSearchPipe,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,
