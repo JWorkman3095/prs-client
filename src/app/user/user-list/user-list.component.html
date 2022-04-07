@@ -18,14 +18,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let u of users">
+        <tr *ngFor="let u of users | userSearch: searchCriteria">
             <td>{{u.id}}</td>
             <td>{{u.username}}</td>
             <td>{{u.firstname + " " + u.lastname}}</td>
             <td>{{u.email}}</td>
             <td>{{u.phone}}</td>
-            <td>{{u.isReview}}</td>
-            <td>{{u.isAdmin}}</td>
+            <td>{{u.isReview | boolDisplay }}</td>
+            <td>{{u.isAdmin | boolDisplay}}</td>
             <td>
                 <a routerLink="/user/detail/{{ u.id }}">Detail</a>
                 
