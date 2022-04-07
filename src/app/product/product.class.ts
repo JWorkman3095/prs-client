@@ -1,4 +1,3 @@
-
 import { Vendor } from "../vendor/vendor.class";
 
 export class Product {
