@@ -26,7 +26,7 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductSearchPipe } from './product/product-search.pipe';
 import { BoolDisplayPipe } from './bool-display.pipe';
-import { RequestComponent } from './request/request/request.component';
+//import { RequestComponent } from './request/request/request.component';
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
@@ -57,7 +57,7 @@ import { RequestSearchPipe } from './request/request-search.pipe';
     ProductCreateComponent,
     ProductSearchPipe,
     BoolDisplayPipe,
-    RequestComponent,
+    //RequestComponent,
     RequestListComponent,
     RequestEditComponent,
     RequestDetailComponent,

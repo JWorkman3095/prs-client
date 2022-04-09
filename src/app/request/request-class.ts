@@ -11,7 +11,8 @@ export class Request {
 
     userId: number = 0;
     user!: User;
+    usersUserName: string = "";
 
-    //requestline: requestlines ;
+    //requestlines!: Requestline[]
 
 }

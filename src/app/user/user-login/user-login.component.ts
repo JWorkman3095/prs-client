@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { SystemService } from 'src/app/system.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -8,23 +10,43 @@ import { UserService } from '../user.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  username: string = "";
-  password: string = "";
+  pageTitle: string = "PRS Login";
+  showVerifyButton: boolean = false;
+  get isAdmin() { 
+    if(!this.sys.isLoggedIn) {
+      return false;
+    } 
+    return this.sys.getLoggedInUser()?.isAdmin; 
+  }
+
+  username: string = "sa";
+  password: string = "sa";
+  msg: string = "";
 
   constructor(
-    private usesvc: UserService
+    private usesvc: UserService,
+    private sys: SystemService,
+    private router: Router
   ) { }
 
-  submit(): void {
+  login(): void {
+    this.msg = "";
     this.usesvc.login(this.username, this.password).subscribe({
       next: (res) => {
-        console.log("Login successful!");
+        console.debug("Login is successful!");
+        this.sys.setLoggedInUser(res);
+        this.router.navigateByUrl("/request/list");
       },
       error: (err) => {
-        console.error("Login unsuccessful!");
+        if(err.status == 404) {
+          this.msg = "Username/Password is not found";
+        } else {
+          console.error(err);
+        }
       }
     });
   }
+
 
   ngOnInit(): void {
   }

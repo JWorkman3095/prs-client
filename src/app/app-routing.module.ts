@@ -17,6 +17,14 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+
+
+
+//import { RequestListComponent } from './request/request-list/request-list.component';
 
 
 const routes: Routes = [
@@ -25,25 +33,30 @@ const routes: Routes = [
   {path: "about", component: AboutComponent},
 
   
-  {path: "user", component: UserListComponent},
+  //{path: "user", component: UserListComponent},
   {path: "user/list", component: UserListComponent},
-  {path: "user/detail/:id", component: UserDetailComponent },
-  {path: "user/edit/:id", component: UserEditComponent },
+  {path: "user/detail/:id", component: UserDetailComponent},
+  {path: "user/edit/:id", component: UserEditComponent},
   {path: "user/create", component: UserCreateComponent},
 
   
-  {path: "vendor", component: VendorListComponent},
+  //{path: "vendor", component: VendorListComponent},
   {path: "vendor/list", component: VendorListComponent},
   {path: "vendor/detail/:id", component: VendorDetailComponent},
   {path: "vendor/edit/:id", component: VendorEditComponent},
   {path: "vendor/create", component: VendorCreateComponent},
 
-  {path: "product", component: ProductListComponent},
+  //{path: "product", component: ProductListComponent},
   {path: "product/list", component: ProductListComponent},
   {path: "product/detail/:id", component: ProductDetailComponent},
   {path: "product/edit/:id", component: ProductEditComponent},
   {path: "product/create", component: ProductCreateComponent},
 
+  //{path: "request", component: RequestListComponent},
+  {path: "request/list", component: RequestListComponent},
+  {path: "request/detail/:id", component: RequestDetailComponent},
+  {path: "request/edit/:id", component: RequestEditComponent},
+  {path: "request/create", component: RequestCreateComponent},
 
 
   { path: "user/login", component: UserLoginComponent },

@@ -15,7 +15,10 @@ export class UserSearchPipe implements PipeTransform {
     for(let user of users) {
       if(
         user.firstname.toLowerCase().includes(searchCriteria)
+        || user.lastname.toLocaleLowerCase().includes(searchCriteria)
         || user.username.toLowerCase().includes(searchCriteria)
+        || user.phone !=null && user.phone.toLocaleLowerCase().includes(searchCriteria)
+        || user.email !=null && user.email.toLocaleLowerCase().includes(searchCriteria)
       ) {
         selectedUsers.push(user);
       }

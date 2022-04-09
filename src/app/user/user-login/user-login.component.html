@@ -1,15 +1,31 @@
-<div>
-    <span id="pageTitle">User Login</span>
-</div>
-<div>
-    <label>Login name:</label>
-    <input [(ngModel)]="username" type="text">
-</div>
-<br>
-<div>
-    <label>Password:</label>
-    <input [(ngModel)]="password" type="text">
-</div>
-<div>
-<button (click)="submit()">Login</button>
+<div id="login">
+    <div>
+        <form>
+            <table class="table table-sm table-borderless">
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="fs-2 fw-bold">{{ pageTitle}}</td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input [(ngModel)]="username" name= "username" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input [(ngModel)]="password" name="password" type="password"></td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+            <P>
+                <button (click)="login()" class ="btn btn-primary">Login</button>
+            </P>
+            <p>
+                <span class="fw-bold text-danger">{{ msg }}&nbsp;</span>  
+            </p>    
+        </form>
+    </div>
+
 </div>
