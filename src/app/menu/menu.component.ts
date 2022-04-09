@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './menu.class';
+import { SystemService } from '../system.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,14 @@ import { Menu } from './menu.class';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
+  get username() {
+    if(!this.sys.isLoggedIn) {
+      return "[]";
+    }
+    return `[${this.sys.getLoggedInUser()?.username}]`;
+  }
+
 
   menus: Menu[] = [
     new Menu("Home", "/home"),
@@ -20,7 +29,9 @@ export class MenuComponent implements OnInit {
     new Menu("Login", "/user/login")
   ];
 
-  constructor() { }
+  constructor(
+    private sys: SystemService
+  ) { }
 
   ngOnInit(): void {
   }

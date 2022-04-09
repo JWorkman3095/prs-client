@@ -12,6 +12,7 @@ import { Request } from '../request-class';
 })
 export class RequestCreateComponent implements OnInit {
 
+  pageTitle: string = "Request Create";
   request: Request = new Request();
   get isAdmin() { 
     if(!this.sys.isLoggedIn) {
