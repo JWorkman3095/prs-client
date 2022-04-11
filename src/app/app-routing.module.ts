@@ -21,6 +21,11 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestReviewsComponent } from './request/request-reviews/request-reviews.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
 
 
@@ -36,6 +41,7 @@ const routes: Routes = [
   {path: "user/detail/:id", component: UserDetailComponent},
   {path: "user/edit/:id", component: UserEditComponent},
   {path: "user/create", component: UserCreateComponent},
+  {path: "login", component: UserLoginComponent},
 
   {path: "vendor/list", component: VendorListComponent},
   {path: "vendor/detail/:id", component: VendorDetailComponent},
@@ -46,12 +52,18 @@ const routes: Routes = [
   {path: "product/detail/:id", component: ProductDetailComponent},
   {path: "product/edit/:id", component: ProductEditComponent},
   {path: "product/create", component: ProductCreateComponent},
+  
 
   {path: "request/list", component: RequestListComponent},
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/edit/:id", component: RequestEditComponent},
   {path: "request/create", component: RequestCreateComponent},
+  {path: "request/lines/:id", component: RequestLinesComponent},
+  {path: "request/reviews", component: RequestReviewsComponent},
+  {path: "request/review/:id", component: RequestReviewItemComponent},
 
+  {path: "requestlines/create/:rid", component: RequestlineCreateComponent},
+  {path: "requestlines/edit/:id", component: RequestlineEditComponent},
 
   { path: "user/login", component: UserLoginComponent },
 

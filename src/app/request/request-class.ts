@@ -1,3 +1,4 @@
+import { Requestline } from "../requestline/requestline.class";
 import { User } from "../user/user.class";
 
 export class Request {
@@ -5,7 +6,7 @@ export class Request {
     description: string = "";
     justification: string = "";
     rejectionreason: string = "";
-    deliverymode: string = "";
+    deliverymode: string = "Pick Up";
     status: string = "NEW";
     total: number = 0;
 
@@ -13,6 +14,6 @@ export class Request {
     user!: User;
     usersUserName: string = "";
 
-    //requestlines!: Requestline[]
+    requestlines!: Requestline[]
 
 }

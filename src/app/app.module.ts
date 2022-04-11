@@ -32,6 +32,12 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestSearchPipe } from './request/request-search.pipe';
+//import { RequestLineComponent } from './request/request-line/request-line.component';
+import { RequestReviewsComponent } from './request/request-reviews/request-reviews.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +68,12 @@ import { RequestSearchPipe } from './request/request-search.pipe';
     RequestEditComponent,
     RequestDetailComponent,
     RequestCreateComponent,
-    RequestSearchPipe
+    RequestSearchPipe,
+    RequestReviewsComponent,
+    RequestReviewItemComponent,
+    RequestlineEditComponent,
+    RequestlineCreateComponent,
+    RequestLinesComponent
   ],
   imports: [
     BrowserModule,FormsModule, HttpClientModule,

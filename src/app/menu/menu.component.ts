@@ -21,11 +21,11 @@ export class MenuComponent implements OnInit {
     new Menu("Home", "/home"),
     new Menu("About","/about"),
     
-    new Menu("Users", "/user/list"),
+    new Menu("Userss", "/user/list"),
     new Menu("Vendors", "/vendor/list"),
     new Menu("Products", "/product/list"),
     new Menu("Requests", "/request/list"),
-
+    new Menu("Reviews", "/request/review"),
     new Menu("Login", "/user/login")
   ];
 
