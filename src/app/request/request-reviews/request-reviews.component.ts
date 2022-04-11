@@ -37,7 +37,7 @@ export class RequestReviewsComponent implements OnInit {
       },
       error: (err) => console.error(err)
     });
-
+    
   }
-  
+
 }
