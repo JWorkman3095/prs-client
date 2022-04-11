@@ -17,7 +17,7 @@ export class RequestService {
   ) { }
 
   reviews(userId: number): Observable<Request[]> {
-    return this.http.get(`${this.baseUrl}/reviews/${userId}`) as Observable<Request[]>;
+    return this.http.get(`${this.baseUrl}/review/${userId}`) as Observable<Request[]>;
   }
 
   list(): Observable<Request[]> {

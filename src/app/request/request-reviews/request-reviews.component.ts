@@ -39,5 +39,5 @@ export class RequestReviewsComponent implements OnInit {
     });
 
   }
-
+  
 }
