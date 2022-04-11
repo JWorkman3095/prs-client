@@ -10,7 +10,7 @@ import { SystemService } from 'src/app/system.service';
 })
 export class RequestListComponent implements OnInit {
   
-  requests: Request[] = [];
+  requests!: Request[];
   searchCriteria: string = "";
   get isAdmin() { return this.sys.isAdmin;}
 

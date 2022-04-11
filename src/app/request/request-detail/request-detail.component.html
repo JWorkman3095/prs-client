@@ -35,9 +35,9 @@
 </table>
 <div>
     <a *ngIf="request" class="btn btn-warning" routerLink="/request/edit/{{request.id}}">Edit</a>
-    | <button (click)="remove()" class="btn btn-danger" routerLink="/request/list">Delete</button>
+    | <button (click)="remove()" class="btn btn-danger" >Delete</button>
     <span *ngIf="showVerifyButton">
-        | <button (click)="verifyRemove()" class="btn btn-danger" routerLink="/request/list">Verify Delete</button>
+        | <button (click)="verifyRemove()" class="btn btn-danger" >Verify Delete</button>
     </span>
     | <a id="back" class="btn btn-secondary" routerLink="/request/list">Back</a>
 </div>

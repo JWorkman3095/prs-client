@@ -2,7 +2,7 @@
 <div>
     <span id="pageTitle">Request List</span> | 
     <a routerLink="/request/create">Create </a>                                                                                                                            |
-    <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+    <input [(ngModel)]="searchCriteria" class="borderless" type="text" placeholder="Search">
 </div>
 <table class="table table-striped table-sm">
     <thead>
@@ -27,7 +27,8 @@
             <td>
                 <a routerLink="/request/detail/{{r.id}}">Detail</a> |
                 <a routerLink="/request/edit/{{r.id}}">Edit</a> |
-                <a routerLink="/requestlines/edit/{{r.id}}">Lines</a>
+                <!--<a routerLink="/requestlines/edit/{{r.id}}">Lines</a>-->
+                <a routerLink="/request/lines/{{r.id}}">Lines</a>
             </td>
         </tr>
     </tbody>
