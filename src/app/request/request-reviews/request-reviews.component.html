@@ -26,9 +26,9 @@
                     <td>{{ r.rejectionreason}}</td>
                     <td>{{ r.status }}</td>
                     <td>{{ r.total | currency }}</td>
-                    <td>{{ r.user.username }}</td>
+                    <td *ngIf ="r.user">{{ r.user.username }}</td>
                     <td>
-                        <a routerLink="/requests/review/{{ r.id }}" class="clickable">Review</a>
+                        <a routerLink="/request/review/{{ r.id }}" class="clickable">Review</a>
                     </td>
                 </tr>
             </tbody>
